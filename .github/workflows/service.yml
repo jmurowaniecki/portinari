@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  update-badges:
+  build-artifact:
     runs-on: ubuntu-latest
     steps:
 
@@ -31,5 +31,6 @@ jobs:
         echo "Updating '${BRANCH}…'"
         git config --global user.email "jmurowaniecki@gmail.com"
         git config --global user.name  "John's Shadow 🜏"
+        git add dist
         git commit -am '[skip ci] publishing…' && \
         git push origin "${BRANCH}" || true
