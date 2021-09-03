@@ -1,0 +1,54 @@
+ .\" Manpage for Portinari.
+.\" Contact john@compilou.com.br to correct errors or typos.
+.TH man 8 "1 Set 2021" "1.0" "portinari man page"
+.SH NAME
+portinari \- Package Portinari provide a tool to resize, crop given and center images.
+
+.SH SYNOPSIS
+portinari
+.B <\fBsource_image\fR>
+{\fB\-R\fR|--resize \fIW,H\fR}
+{\fB\-C\fR|--crop \fIW,H\fR}
+.IR <target_image>
+
+.SH DESCRIPTION
+.B Portinari
+was builted intending to resize and crop images from book covers provided by the user on README.md file using regular expression to download images and set their final filenames.
+
+This tool generates an intermediary file called `processed.png`
+
+.SH OPTIONS
+.TP
+.BR <\fBsource_image\fR>
+Local file to be processed.
+
+.TP
+.BR \-R ", " \-\-resize =\fIW,H\fR
+Resize image to the given resolution.
+Default is 150,200.
+
+.TP
+.BR \-C ", " \-\-crop =\fIW,H\fR
+Crop image to the given resolution.
+Default is 150,200.
+
+.TP
+.BR <target_image>
+Processed result image.
+Default is `processed.png`.
+
+
+.SH DOCUMENTATION
+
+In order to generate source documentation execute the command `godoc -url "http://localhost:6060/" > page.html`
+
+
+
+.SH SEE ALSO
+https://github.com/jmurowaniecki/portinari
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHOR
+John Murowaniecki <john@compilou.com.br>
