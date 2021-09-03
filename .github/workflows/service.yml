@@ -11,9 +11,11 @@ jobs:
     steps:
 
     - uses: actions/checkout@v2
+
     - name: Run Makefile to generate badges based on repositories languages and book listing.
       env:
         TOKEN: ${{ secrets.TOKEN }}
+      run: make clean
 
     - name: Set up Go 1.17
       uses: actions/setup-go@v2
